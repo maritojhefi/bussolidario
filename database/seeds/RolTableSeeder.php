@@ -12,16 +12,18 @@ class RolTableSeeder extends Seeder
      */
     public function run()
     {
-        Rol::truncate();
-       
-         Category::create([
+        
+       Rol::truncate();
+         Rol::create([
              'nombre'=>"user",
-             'detalle'=>"acceso limitado"
+             'detalle'=>"acceso limitado",
+            
          ]);
-         Category::create([
+         Rol::create([
             'nombre'=>"admin",
-             'detalle'=>"acceso total"
-         ]);
+            'detalle'=>"acceso total",
+           
+        ]);
         
     }
 }
