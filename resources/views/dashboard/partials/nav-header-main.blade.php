@@ -15,7 +15,10 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="{{route('distrito.index')}}">Distritos</a>
             <a href="{{route('formulario.index')}}" class="dropdown-item">Registros Personales</a>
-@if (auth()->user()->id==2)
+            
+@if (auth()->user()->rol_id==2)
+    
+
 <a href="{{route('reporte')}}" class="dropdown-item">Reportes</a>
 <a href="{{route('IndexUsers')}}" class="dropdown-item">Registros Totales</a>
 <a class="dropdown-item" href="{{route('user.index')}}">Usuarios</a>

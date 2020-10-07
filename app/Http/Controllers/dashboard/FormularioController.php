@@ -18,6 +18,7 @@ class FormularioController extends Controller
     }
     public function index()
     {
+        
         $sesion=auth()->user()->id;
         $formularios=Formulario::orderBy('id','desc')->where('user_id','like',"%$sesion%")->paginate(8);
        

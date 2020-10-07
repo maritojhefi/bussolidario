@@ -68,7 +68,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => $data['password'],
-            'rol_id'=>2,
+            'rol_id'=>1,
         ]);
     }
 }
