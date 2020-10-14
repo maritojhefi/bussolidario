@@ -65,11 +65,14 @@ class ReporteController extends Controller
     }
     public function importarExcel(Request $request)
     {
-      
+        try {
             $import = new FormularioImport();
         Excel::import($import, request()->file('registros'));
         return view('dashboard.reportes.import', ['numRows'=>$import->getRowCount()]);
-     
+        } catch (\Throwable $th) {
+            return back()->with('status','Errores en el documento');
+
+        }
        
     }
     public function importarExcel2(Request $request)
