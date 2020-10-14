@@ -49,7 +49,7 @@
             </div>
         </div>
             
-              <input type="submit" class="btn btn-success" value="Enviar">
+              <input type="submit" class="btn btn-success btn-lg" value="Guardar">
          
    
       

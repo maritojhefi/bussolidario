@@ -4,8 +4,12 @@ namespace App\Http\Controllers\dashboard;
 
 use App\distrito;
 use App\Formulario;
+use App\Exports\UsersExport;
 use Illuminate\Http\Request;
+use App\Exports\RegistrosExport;
+use App\Imports\FormularioImport;
 use App\Http\Controllers\Controller;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ReporteController extends Controller
 {
@@ -35,9 +39,9 @@ class ReporteController extends Controller
 
        $filtros=([$nombres,$distritos,$cedulas,$fechainicio,$fechafinal]);
 
+     
+       $cantidad=$Registros->total();
       
-       $cantidad=$Registros->count();
-       
        return view('dashboard.reportes.index', compact('Registros'),['listDistritos'=>$listDistritos,'cantidad'=>$cantidad,'filtros'=>$filtros]);
 
     }
@@ -45,6 +49,33 @@ class ReporteController extends Controller
     public function show(Formulario $formulario)
     {
         return view ('dashboard.reportes.show',["formulario"=>$formulario]);
+    }
+    public function reporteExcel(Formulario $excel)
+    {
+        
+        return Excel::download(new RegistrosExport($excel), 'registros.xlsx');
+    }
+    public function reporteExcelpersonalizado(Request $excel)
+    {
+        return Excel::download(new RegistrosExport($excel), 'registros.xlsx');
+    }
+    public function importarShow()
+    {
+        return view ('dashboard.reportes.import');
+    }
+    public function importarExcel(Request $request)
+    {
+      
+            $import = new FormularioImport();
+        Excel::import($import, request()->file('registros'));
+        return view('dashboard.reportes.import', ['numRows'=>$import->getRowCount()]);
+     
+       
+    }
+    public function importarExcel2(Request $request)
+    {
+       $file=$request->registros;
+       Excel::import(new FormularioImport, $file);
     }
 
 }

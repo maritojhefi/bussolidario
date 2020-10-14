@@ -24,8 +24,8 @@ class DistritoPostRequest extends FormRequest
     public function rules()
     {
         return [
-            'nombre'=>'required|min:5|max:200',
-            'ubicacion'=>'required|max:200',
+            'nombre'=>'required|max:200',
+            'observacion'=>'required|max:200',
            
         ];
     }

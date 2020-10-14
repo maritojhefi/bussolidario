@@ -28,7 +28,7 @@ class FormularioPostRequest extends FormRequest
             'ci'=>'required|max:10',
             'telefono'=>'required|min:8',
             'barrio'=>'required|max:100',
-            'zona'=>'required|max:100',
+            
             'distrito_id'=>'required',
             'user_id'=>'required'
         ];

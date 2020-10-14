@@ -16,13 +16,13 @@ class CreateFormulariosTable extends Migration
         Schema::create('formularios', function (Blueprint $table) {
             $table->id();
             $table->string('beneficiario', 100);
-            $table->string('ci', 100);
-            $table->string('telefono', 100);
-            $table->string('barrio', 100);
-            $table->string('zona', 100);
-$table->integer('distrito_id')->unsigned();
-$table->integer('user_id')->unsigned();
-            $table->timestamps();
+            $table->string('ci', 100)->nullable();
+            $table->string('telefono', 100)->default(00000000)->nullable();
+            $table->string('barrio', 100)->nullable();
+$table->integer('distrito_id')->nullable();
+$table->integer('user_id')->nullable();
+            $table->date('created_at');
+            $table->date('updated_at');
         });
     }
 

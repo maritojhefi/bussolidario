@@ -4,11 +4,13 @@ namespace App;
 
 use App\User;
 use App\distrito;
+use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Formulario extends Model
 {
-    protected $fillable=['beneficiario', 'ci','telefono','barrio','zona','distrito_id','user_id'];
+    
+    protected $fillable=['beneficiario', 'ci','telefono','barrio','distrito_id','user_id','created_at'];
 
     public function distrito()
     {
@@ -23,7 +25,7 @@ class Formulario extends Model
     		return $query->where('beneficiario','like',"%$beneficiarios%");
     	}
     }
-
+    
 
 
     public function scopeDistritos($query, $distritos) {

@@ -21,8 +21,9 @@ class FormularioController extends Controller
         
         $sesion=auth()->user()->id;
         $formularios=Formulario::orderBy('id','desc')->where('user_id','like',"%$sesion%")->paginate(8);
-       
-         return view('dashboard.formularios.index',['formularios'=>$formularios,'rol'=>2]);
+        $cantidad=$formularios->total();
+
+         return view('dashboard.formularios.index',['formularios'=>$formularios,'rol'=>2,'cantidad'=>$cantidad]);
     }
 
    

@@ -25,11 +25,7 @@
                 <input type="text" name="barrio" class="form-control" id="barrio" value="{{old('barrio',$formulario->barrio)}}">
           
             </div>
-            <div class="form-group">
-                <label for="zona">Zona</label>
-                <input type="text" name="zona" class="form-control" id="zona" value="{{old('zona',$formulario->zona)}}">
-          
-            </div>
+           
             <div class="form-group">
                 <label for="distrito_id"> Distrito</label>
           <select name="distrito_id" class="form-control" id="distrito_id">

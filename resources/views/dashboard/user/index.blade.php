@@ -6,7 +6,7 @@
     
 <table class="table">
     <thead>
-        <tr>
+        <tr style="color:#FF7126 ">
             <td>
                 Nombre
             </td>

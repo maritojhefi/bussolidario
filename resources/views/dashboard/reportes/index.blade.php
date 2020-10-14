@@ -51,7 +51,7 @@
 @endif
 <table class="table">
   <thead>
-      <tr>
+      <tr style="color:#FF7126 ">
          
           <td>
               Nombre Beneficiario
@@ -89,7 +89,10 @@
             {{$formulario->ci}}
         </td>
         <td>
+          @if ($formulario->distrito!=null)
           {{$formulario->distrito->nombre}}
+
+          @endif
       </td>
        
     
@@ -116,7 +119,7 @@
 
 {{$Registros->links()}}
       
-
+<a href="{{route('reporteExcel',$Registros)}}">Descargar Excel</a>
 
 
 
@@ -145,10 +148,7 @@
       </div>
     </div>
   </div>
-  <script>
-
-$('buscarpordistrito').empty().append('asdas');
-  </script>
+ 
 
 
 

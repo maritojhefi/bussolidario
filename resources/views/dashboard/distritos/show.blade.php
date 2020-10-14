@@ -14,8 +14,8 @@
                 @enderror
             </div>
             <div class="form-group">
-                <label for="color">Ubicacion</label>
-                <input type="text" name="color"readonly class="form-control" id="color" value="{{$distrito->ubicacion}}">
+                <label for="color">Observacion</label>
+                <input type="text" name="color"readonly class="form-control" id="color" value="{{$distrito->observacion}}">
           
             </div>
 

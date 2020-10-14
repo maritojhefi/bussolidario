@@ -6,7 +6,7 @@
     
 <table class="table">
     <thead>
-        <tr>
+        <tr style="color:#FF7126 ">
            
             <td>
                 Nombre
@@ -14,7 +14,7 @@
             
             
             <td>
-              Ubicacion
+              Observacion
           </td>
           
          
@@ -35,7 +35,7 @@
            
             
             <td>
-              {{$distrito->ubicacion}}
+              {{$distrito->observacion}}
           </td>
           
         

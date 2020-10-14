@@ -2,19 +2,19 @@
 @section('content')
 <h3>Registros
 @if ($rol==2)
-    hechos por ti
+    hechos por ti({{$cantidad}})
 @elseif($rol==1)
-globales
+globales({{$cantidad}})
 @endif
 </h3>
 <a class="btn btn-success mt-3 mb-3" href="{{route('formulario.create')}}">Registrar</a>
 {!! Alert::render() !!}
 <table class="table">
     <thead>
-        <tr>
+        <tr style="color:#FF7126 ">
            
-            <td>
-                Nombre Beneficiario
+            <td style="color:#FF7126 ">
+                BENEFICIARIO
             </td>
             
             
@@ -22,21 +22,24 @@ globales
               CI
           </td>
           <td>
-            Distrito
+            DISTRITO
         </td>
           <td>
-            Barrio
+            BARRIO
         </td>
+        @if ($rol==1)
         <td>
-          Usuario
+          USUARIO
       </td>
+        @endif
+        
       
     <td>
-      Fecha de registro
+      FECHA REGISTRO
   </td>
           
             <td>
-                Acciones
+                ACCIONES
             </td>
         </tr>
     </thead>
@@ -62,9 +65,14 @@ globales
           <td>
             {{$formulario->barrio}}
         </td>
+        @if ($rol==1)
         <td>
+          @if ($formulario->user!=null)
           {{$formulario->user->name}}
-      </td>
+          @endif
+      </td> 
+        @endif
+       
       
     <td>
       {{$formulario->created_at->format('d-M-Y')}}

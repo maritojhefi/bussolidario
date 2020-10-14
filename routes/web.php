@@ -27,6 +27,14 @@ Route::get('/dashboard/reporte', 'dashboard\ReporteController@index')->name('rep
 Route::get('/dashboard/reporte/{formulario}/show', 'dashboard\ReporteController@show')->name('showreport');
 
 Route::get('/dashboard/indexUsers', 'dashboard\FormularioUserController@index')->name('IndexUsers');
+Route::get('/dashboard/download', 'dashboard\ReporteController@reporteExcel')->name('reporteExcel');
+Route::get('/dashboard/download/{excel}', 'dashboard\ReporteController@reporteExcelpersonalizado')->name('reporteExcelpersonalizado');
+Route::get('/dashboard/imports', 'dashboard\ReporteController@importarShow')->name('importarShow');
+Route::post('/dashboard/imports/excel', 'dashboard\ReporteController@importarExcel')->name('importarExcel');
+
+
+
+
 
 
 

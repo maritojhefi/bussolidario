@@ -16,7 +16,7 @@ class CreateDistritosTable extends Migration
         Schema::create('distritos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 100);
-            $table->string('ubicacion', 100);
+            $table->string('observacion', 100)->nullable();
             $table->timestamps();
         });
     }
