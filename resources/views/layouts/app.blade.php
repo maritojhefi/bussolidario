@@ -62,6 +62,10 @@
                                     </form>
                                 </div>
                             </li>
+                            <li>
+                                <a  href="{{ url('/dashboard/formulario') }}" class="btn btn-dark">Ir al panel administrativo</a>
+
+                            </li>
                         @endguest
                     </ul>
                 </div>
