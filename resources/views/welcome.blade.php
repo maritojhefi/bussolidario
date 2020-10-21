@@ -20,7 +20,7 @@
 .banner{
 	height: 100vh;
 	width: 100%;
-	background:url({{ asset('images/overlay.png') }}),url({{ asset('images/fondo.jpg') }});
+	background:url({{ asset('images/overlay.png') }}),url({{ asset('images/fondo2.jpeg') }});
 	background-position: top;
 	background-size:cover;
 	/*background-attachment: fixed;*/
