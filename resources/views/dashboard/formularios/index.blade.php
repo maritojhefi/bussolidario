@@ -1,15 +1,30 @@
 @extends('dashboard.master')   
 @section('content')
-<h3>Registros
+
+
+
+<div class="table-responsive">
+  <div class="card ">
+  <div class="card-header card-header-warning">
+    <h4 class="card-title">
+      Registros
 @if ($rol==2)
     hechos por ti({{$cantidad}})
 @elseif($rol==1)
 globales({{$cantidad}})
 @endif
-</h3>
-<a class="btn btn-success mt-3 mb-3" href="{{route('formulario.create')}}">Registrar</a>
-{!! Alert::render() !!}
-<table class="table">
+    </h4>
+    <div class="card-category">
+      Aqui encontraras todos los registros</div>
+  </div>
+  <div class="form-inline table-responsive">
+    <a class="btn btn-success btn-sm mt-1 mb-3 ml-3" href="{{route('formulario.create')}}">Registrar</a><div class="btn-sm mt-3 mb-3 ml-3">{{$formularios->links()}}</div>
+    {!! Alert::render() !!}
+  </div>
+  <div class="card-body table-responsive">
+    <table class="table table-shopping">
+
+
     <thead>
         <tr style="color:#FF7126 ">
            
@@ -93,10 +108,13 @@ globales({{$cantidad}})
         @endforeach
     </tbody>
 </table>  
-      
+  </div>
+  </div>
+</div>
 
 
-{{$formularios->links()}}
+
+
 
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">

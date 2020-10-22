@@ -1,8 +1,17 @@
 @extends('dashboard.master')   
 @section('content')
-<h3>Reportes de datos historicos</h3>
 
-<nav class="navbar navbar-light float-right">
+<div class="card">
+  <div class="card-header card-header-success">
+    <h4 class="card-title">
+     Personalize su reporte
+    </h4>
+    <div class="card-category">
+     Puede buscar por mas de 1 filtro</div>
+  </div>
+ 
+  <div class="card-body">
+
   <form class="form-inline">
 <div
  class="row m-1">
@@ -10,7 +19,7 @@
 
    
     <div class="form-inline mr-1">
-      <label for="buscarpordistrito"> Distrito</label>
+      <label for="buscarpordistrito" class="bmd-label-floating"> Distrito</label>
 <select name="buscarpordistrito" class="form-control" id="buscarpordistrito">
   <option value="">Selecciona</option>
   @foreach ($listDistritos  as $nombre=>$id)
@@ -26,29 +35,47 @@
 
 </div>
    <div class="row m-1">
-     <label for="">INICIO</label>
+     <label for="" class="bmd-label-floating">INICIO</label>
     <input type="date" name="fecha_inicio"  class="form-control mr-sm-2" placeholder="Fecha inicio"/>
-    <label for="">FINAL</label>
+    <label for="" class="bmd-label-floating">FINAL</label>
     <input type="date" name="fecha_final"  class="form-control mr-sm-2" placeholder="Fecha final"/>
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
    </div>
     
   </form>
-</nav>
-@if ($cantidad!=null)
-<h5>Registros encontrados {{$cantidad}}</h5>
-@foreach ($filtros as $filtros)
-@if ($filtros!=null)
 
-@endif    
+  </div>
+</div>
 
-@endforeach
-    
-@else
-<h5>No se encontraron registros</h5>
-  
+<div class="table-responsive">
+  <div class="card">
+  <div class="card-header card-header-warning">
+    <h4 class="card-title">
+      @if ($cantidad!=null)
+      Registros encontrados: {{$cantidad}}
+      @foreach ($filtros as $filtros)
+      @if ($filtros!=null)
+      
+      @endif    
+      
+      @endforeach
+          
+      @else
+     No se encontraron registros
+        
+      
+      @endif
+    </h4>
+    <div class="card-category">
+     Crea tu reporte personalizado</div>
+  </div>
+  <div class="form-inline">
+    <div class="btn-sm mt-3 mb-3 ml-3">{{$Registros->links()}}</div>
+    {!! Alert::render() !!}
+  </div>
+  <div class="card-body">
+    <table class="table table-shopping">
 
-@endif
 <table class="table">
   <thead>
       <tr style="color:#FF7126 ">
@@ -117,7 +144,7 @@
     
 
 
-{{$Registros->links()}}
+
       
 <a href="{{route('reporteExcel',$Registros)}}">Descargar Excel</a>
 

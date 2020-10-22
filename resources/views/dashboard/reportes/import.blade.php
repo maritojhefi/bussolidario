@@ -1,9 +1,17 @@
 @extends('dashboard.master')   
 @section('content')
 <div class="flex-center position-ref full-height">
-     
-  <div class="container mt-5">
-      <h3>Importar registros</h3>
+    <div class="card">
+        <div class="card-header card-header-success">
+          <h4 class="card-title">
+          Importar datos desde excel
+          </h4>
+          <div class="card-category">
+           Debe de tener el formato correcto para importar satisfactoriamente</div>
+        </div>
+       
+        <div class="card-body">   
+ 
 
       @if ( $errors->any() )
 
@@ -21,13 +29,14 @@
         <form action="{{route('importarExcel')}}" method="post" enctype="multipart/form-data">
           {{csrf_field()}}
           <div class="row">
-              <div class="col-3">
-                  <div class="custom-file">
-                      <input type="file" name="registros" class="custom-file-input" id="registros">
-                      <label class="custom-file-label" for="alumnos">Seleccionar archivo</label>
+              <div class="col-12">
+                  <div class="card_header card-header-info">
+                    <label class="card-category" for="alumnos">Seleccionar archivo</label>
+
+                      <input type="file" name="registros" class="" id="registros">
                   </div>
                   <div class="mt-3">
-                      <button type="submit" class="btn btn-primary">Importar</button>
+                      <button type="submit" class="btn btn-primary btn-round">Importar</button>
                   </div>
               </div>
           </div>
@@ -35,7 +44,8 @@
   </div>
 </div>
 
- 
+</div>
+
 
 
 

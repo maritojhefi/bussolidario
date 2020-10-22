@@ -3,7 +3,7 @@
     
             @csrf
             <div class="form-group">
-                <label for="title">Nombre</label>
+                <label for="title" class="bmd-label-floating">Nombre</label>
             <input type="text" name="nombre" class="form-control" id="nombre" value="{{old('nombre',$distrito->nombre)}}">
                 @error('title')
     
@@ -11,7 +11,7 @@
                 @enderror
             </div>
             <div class="form-group">
-                <label for="color">Observacion</label>
+                <label for="color" class="bmd-label-floating">Observacion</label>
                 <input type="text" name="observacion" class="form-control" id="observacion" value="{{old('observacion',$distrito->observacion)}}">
           
             </div>

@@ -67,7 +67,7 @@ Cerrar sesion
 		  @else
 		  @error('email')
 		  <li class="nav-item">
-            <label class="nav-link js-scroll-trigger btn btn-danger btn-lg " for="">Error en los datos ingresados</label>
+            <label class="nav-link js-scroll-trigger btn btn-danger btn-lg text-white" for="">Error en los datos ingresados</label>
 		  </li>
 		  @enderror
           <li class="nav-item">

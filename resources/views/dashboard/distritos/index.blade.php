@@ -1,67 +1,87 @@
 @extends('dashboard.master')   
 @section('content')
-<h3>Distritos registrados</h3>
+<div class="table-responsive">
+  <div class="card">
+  <div class="card-header card-header-warning">
+    <h4 class="card-title">
+      Listado de Distritos
+    </h4>
+    <div class="card-category">
+      Aqui encontraras todos los distritos</div>
+  </div>
+  <div class="form-inline">
+    <a class="btn btn-success btn-sm mt-1 mb-3 ml-3" href="{{route('distrito.create')}}">Crear</a><div class="btn-sm mt-3 mb-3 ml-3">{{$distritos->links()}}</div>
 
-<a class="btn btn-success btn-sm mt-3 mb-3" href="{{route('distrito.create')}}">Crear</a>
-    
-<table class="table">
-    <thead>
-        <tr style="color:#FF7126 ">
-           
-            <td>
-                Nombre
-            </td>
-            
-            
-            <td>
-              Observacion
-          </td>
-          
-         
-          
-            <td>
-                Acciones
-            </td>
-        </tr>
-    </thead>
-    <tbody>
-
-        @foreach ($distritos as $distrito)
-        <tr>
-           
-            <td>
-                {{$distrito->nombre}}
-            </td>
-           
-            
-            <td>
-              {{$distrito->observacion}}
-          </td>
-          
-        
-
-         <td>
-          <a href="{{route('distrito.show',$distrito->id)}}" class="btn btn-primary"> Ver</a>
-         
-          @if(auth()->user()->rol_id=='2') 
-          <a href="{{route('distrito.edit',$distrito->id)}}" class="btn btn-success"> Editar</a>
-         
+  </div>
+  <div class="card-body">
+    <table class="table table-shopping">
+      <thead>
+          <tr style="color:#FF7126 ">
+             
+              <td>
+                  Nombre
+              </td>
               
-              <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#deleteModal" data-id="{{ $distrito->id}}">Eliminar</button>
-         
-
-
-      </td>
-         @endif
+              
+              <td>
+                Observacion
+            </td>
+            
            
-        </tr>
-        @endforeach
-    </tbody>
-</table>  
+            
+              <td>
+                  Acciones
+              </td>
+          </tr>
+      </thead>
+      <tbody>
+  
+          @foreach ($distritos as $distrito)
+          <tr>
+             
+              <td>
+                  {{$distrito->nombre}}
+              </td>
+             
+              
+              <td>
+                {{$distrito->observacion}}
+            </td>
+            
+          
+  
+           <td>
+          
+           
+            @if(auth()->user()->rol_id=='2') 
+            <a href="{{route('distrito.edit',$distrito->id)}}" class="btn btn-success"> Editar</a>
+           
+                
+                <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#deleteModal" data-id="{{ $distrito->id}}">Eliminar</button>
+           
+  
+  
+        </td>
+           @endif
+             
+          </tr>
+          @endforeach
+      </tbody>
+  </table>  
+  </div>
+  
+</div>
+
+</div>
+
+
+
+    
+
       
 
 
-{{$distritos->links()}}
+
 
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">

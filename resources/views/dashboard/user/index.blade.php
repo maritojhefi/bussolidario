@@ -1,10 +1,21 @@
 @extends('dashboard.master')   
 @section('content')
+<div class="table-responsive">
+  <div class="card">
+  <div class="card-header card-header-warning">
+    <h4 class="card-title">
+      Usuarios
+    </h4>
+    <div class="card-category">
+      Aqui encontraras todos los usuarios que pueden ingresar al sistema</div>
+  </div>
+  <div class="form-inline">
+    <a class="btn btn-success btn-sm mt-1 mb-3 ml-3" href="{{route('user.create')}}">Crear</a><div class="btn-sm mt-3 mb-3 ml-3">{{$users->links()}}</div>
+    {!! Alert::render() !!}
+  </div>
+  <div class="card-body">
+    <table class="table table-shopping">
 
-<h3>Usuarios</h3>
-<a class="btn btn-success btn-sm mt-3 mb-3" href="{{route('user.create')}}">Crear</a>
-    
-<table class="table">
     <thead>
         <tr style="color:#FF7126 ">
             <td>
@@ -61,8 +72,11 @@
 </table>  
       
 
+  </div>
+  </div>
+</div>
 
-{{$users->links()}}
+
 
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">

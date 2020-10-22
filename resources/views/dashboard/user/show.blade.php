@@ -2,7 +2,16 @@
 @section('content')
 
 
-    
+<div class="card">
+    <div class="card-header card-header-warning">
+      <h4 class="card-title">
+        Usuario: {{$user->name}}
+      </h4>
+      <div class="card-category">
+      Revisando a detalle</div>
+    </div>
+   
+    <div class="card-body"> 
     
        
             <div class="form-group">
@@ -20,7 +29,8 @@
             </div>
            
              
-         
+    </div>
+</div>     
       
 
 @endsection
