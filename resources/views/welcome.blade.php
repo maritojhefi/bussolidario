@@ -108,7 +108,7 @@ Cerrar sesion
         <div class="col-lg-8 text-center">
           <h2 class="text-white mt-0">BONO SOLIDARIO COVID-19</h2>
           <hr class="divider light my-4">
-          <p class="text-white-75 mb-1">El pueblo de Tarija recibe esta ayuda alimentaria a traves del programa "BUS SOLIDARIO", establecido por el Gobierno Autónomo Municipal de Tarija, junto a la Dirección de Coordinación y Articulación Social, para llegar y beneficiar  a miles de familias en emergencia  que actualmente afrontan esta pandemia(covid19). Seguimos trabajando con gran compromiso para servir a Tarija.
+          <p class="text-white-75 mb-1">El pueblo de Tarija recibe esta ayuda alimentaria a través del programa "BUS SOLIDARIO", establecido por el Gobierno Autónomo Municipal de Tarija, junto a la Dirección de Coordinación y Articulación Social, para llegar y beneficiar  a miles de familias en emergencia  que actualmente afrontan esta pandemia(covid19). Seguimos trabajando con gran compromiso para servir a Tarija.
             </p>
             <p class="btn btn-block btn-warning text-white"> !PRIMERO LA GENTE!</p>
           <a class="btn btn-light btn-xl js-scroll-trigger" href="#portfolio">ASI AYUDAMOS A LAS PERSONAS</a>
