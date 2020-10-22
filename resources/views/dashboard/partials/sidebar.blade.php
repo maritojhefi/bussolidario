@@ -50,7 +50,7 @@
           <p>Importar desde Excel</p>
         </a>
       </li>
-      <li class="nav-item active-pro ">
+      <li class="nav-item ">
         <p class="nav-link alert alert-success">
           <i class="material-icons text-white">person</i>
           <label for="" class="text-white ">Usuario: {{auth()->user()->name}}</label>
