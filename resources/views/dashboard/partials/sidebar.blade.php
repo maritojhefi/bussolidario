@@ -5,10 +5,9 @@
 
     Tip 2: you can also add an image using data-image tag
 -->
-  <div class="logo"><label  class="simple-text logo-normal">
-    GAMDT	 <a href="{{route('welcome')}}">  <img src="{{ asset('images/logo.png') }}" alt="..." class="img-thumbnail rounded " style="width: 60px"></a>
+  <div class="logo">	 <a href="{{route('welcome')}}">  <img src="{{ asset('images/logo.png') }}" alt="..." class="img-thumbnail rounded ml-4" style="width: 150px"></a>
 
-  </label>
+  
   </div>
   <div class="sidebar-wrapper">
     <ul class="nav">
