@@ -6,7 +6,7 @@
     Tip 2: you can also add an image using data-image tag
 -->
   <div class="logo"><label  class="simple-text logo-normal">
-      GAMDT	  <img src="{{ asset('images/logo.png') }}" alt="..." class="img-thumbnail rounded " style="width: 60px">
+    GAMDT	 <a href="{{route('welcome')}}">  <img src="{{ asset('images/logo.png') }}" alt="..." class="img-thumbnail rounded " style="width: 60px"></a>
 
   </label>
   </div>
