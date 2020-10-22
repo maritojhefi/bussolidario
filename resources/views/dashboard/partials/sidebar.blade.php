@@ -51,10 +51,10 @@
           <p>Importar desde Excel</p>
         </a>
       </li>
-      <li class="nav-item active-pro">
-        <p class="nav-link">
-          <i class="material-icons">person</i>
-          <label for="" class="text-success ">Usuario: {{auth()->user()->name}}</label>
+      <li class="nav-item active-pro ">
+        <p class="nav-link alert alert-success">
+          <i class="material-icons text-white">person</i>
+          <label for="" class="text-white ">Usuario: {{auth()->user()->name}}</label>
         </p>
       </li>
       @endif

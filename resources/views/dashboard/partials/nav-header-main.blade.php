@@ -24,12 +24,12 @@
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
           <label class="dropdown-item"><i class="material-icons text-dark">face</i>{{auth()->user()->name}} </label>
-            
+          <a class="dropdown-item" href="{{route('welcome')}}"><i class="material-icons text-dark">web</i>Ir a Inicio </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                   document.getElementById('logout-form').submit();">
-  <i class="material-icons text-dark">login</i> Cerrar sesion
+  <i class="material-icons text-dark">exit_to_app</i> Cerrar sesion
          </a>
          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
           @csrf
