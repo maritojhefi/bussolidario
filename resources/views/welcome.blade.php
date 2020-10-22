@@ -86,6 +86,8 @@ Cerrar sesion
     <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
+          <img src="{{ asset('images/MARCA.png') }}" alt="..." class=" rounded float-center" style="width:200px ">
+
           <h1 class="text-uppercase text-white font-weight-bold">BUS SOLIDARIO</h1>
 		  <hr class="divider my-1">
 		  <img src="{{ asset('images/logoeditado.png') }}" alt="..." class=" rounded float-center" style="width:200px ">
@@ -129,7 +131,7 @@ Cerrar sesion
 				Bus Solidario
               </div>
               <div class="project-name">
-				<img src="{{ asset('images/MARCA.png') }}" alt="..." class=" rounded float-left" style="width:100px ">
+				<img src="{{ asset('images/MARCA.png') }}" alt="..." class=" rounded float-left" style="width:200px ">
 
               </div>
             </div>
@@ -143,7 +145,7 @@ Cerrar sesion
                 Bus Solidario
               </div>
               <div class="project-name">
-				<img src="{{ asset('images/MARCA.png') }}" alt="..." class=" rounded float-left" style="width:100px ">
+				<img src="{{ asset('images/MARCA.png') }}" alt="..." class=" rounded float-left" style="width:200px ">
 
               </div>
             </div>
@@ -157,7 +159,7 @@ Cerrar sesion
                 Bus Solidario
               </div>
               <div class="project-name">
-				<img src="{{ asset('images/MARCA.png') }}" alt="..." class=" rounded float-left" style="width:100px ">
+				<img src="{{ asset('images/MARCA.png') }}" alt="..." class=" rounded float-left" style="width:200px ">
 
               </div>
             </div>
@@ -171,7 +173,7 @@ Cerrar sesion
                 Bus Solidario
               </div>
               <div class="project-name">
-				<img src="{{ asset('images/MARCA.png') }}" alt="..." class=" rounded float-left" style="width:100px ">
+				<img src="{{ asset('images/MARCA.png') }}" alt="..." class=" rounded float-left" style="width:200px ">
 
               </div>
             </div>
@@ -185,7 +187,7 @@ Cerrar sesion
                 Bus Solidario
               </div>
               <div class="project-name">
-				<img src="{{ asset('images/MARCA.png') }}" alt="..." class=" rounded float-left" style="width:100px ">
+				<img src="{{ asset('images/MARCA.png') }}" alt="..." class=" rounded float-left" style="width:200px ">
 
               </div>
             </div>
@@ -199,7 +201,7 @@ Cerrar sesion
                 Bus Solidario
               </div>
               <div class="project-name">
-				<img src="{{ asset('images/MARCA.png') }}" alt="..." class=" rounded float-left" style="width:100px ">
+				<img src="{{ asset('images/MARCA.png') }}" alt="..." class=" rounded float-left" style="width:200px ">
 
               </div>
             </div>

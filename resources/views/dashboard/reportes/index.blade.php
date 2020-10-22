@@ -32,16 +32,18 @@
 </select>
   </div>
     <input name="buscarporci" class="form-control mr-sm-2" type="search" placeholder="Buscar por CI" aria-label="Search">
-
+<input type="hidden" name="registros" {{$reg=collect($Registros)}} value="{{$reg}}">
 </div>
    <div class="row m-1">
      <label for="" class="bmd-label-floating">INICIO</label>
     <input type="date" name="fecha_inicio"  class="form-control mr-sm-2" placeholder="Fecha inicio"/>
     <label for="" class="bmd-label-floating">FINAL</label>
     <input type="date" name="fecha_final"  class="form-control mr-sm-2" placeholder="Fecha final"/>
+
+   
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
    </div>
-    
+  
   </form>
 
   </div>

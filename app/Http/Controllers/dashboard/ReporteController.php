@@ -21,6 +21,7 @@ class ReporteController extends Controller
 
     public function index(Request $request)
     {
+       //dd($request->get('registros'));
         $nombres = $request->get('buscarpor');
         
        $distritos = $request->get('buscarpordistrito');
@@ -40,6 +41,7 @@ class ReporteController extends Controller
 
        $filtros=([$nombres,$distritos,$cedulas,$fechainicio,$fechafinal]);
 
+       
      
        $cantidad=$Registros->total();
       
@@ -56,7 +58,7 @@ class ReporteController extends Controller
         
         return Excel::download(new RegistrosExport($excel), 'registros.xlsx');
     }
-    public function reporteExcelpersonalizado(Request $excel)
+    public function reporteExcelpersonalizado(Request $request)
     {
         return Excel::download(new RegistrosExport($excel), 'registros.xlsx');
     }
@@ -83,6 +85,7 @@ class ReporteController extends Controller
     }
     public function exportPersonalizado() 
 {
+    
     return Excel::download(new InvoicesExport, 'invoices.xlsx');
 }
 
