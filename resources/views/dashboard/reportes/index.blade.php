@@ -67,86 +67,25 @@
       @endif
     </h4>
     <div class="card-category">
-     Crea tu reporte personalizado</div>
+     Crea tu reporte personalizado
+     <a href="{{route('reporteExcel')}}" class="btn btn-dark btn-sm">Descargar Todo</a>
+     <a href="{{route('exportPersonalizado')}}" class="btn btn-success btn-sm">Personalizado</a>
+    </div>
   </div>
-  <div class="form-inline">
+  <div class="form-inline table-responsive">
     <div class="btn-sm mt-3 mb-3 ml-3">{{$Registros->links()}}</div>
     {!! Alert::render() !!}
   </div>
-  <div class="card-body">
+  <div class="card-body table-responsive">
     <table class="table table-shopping">
 
-<table class="table">
-  <thead>
-      <tr style="color:#FF7126 ">
-         
-          <td>
-              Nombre Beneficiario
-          </td>
-          
-          
-          <td>
-            CI
-        </td>
-        <td>
-          Distrito
-      </td>
-       
-    
-  <td>
-    Fecha de registro
-</td>
-        
-          <td>
-              Acciones
-          </td>
-      </tr>
-  </thead>
-  <tbody>
-
-      @foreach ($Registros as $formulario)
-      <tr>
-         
-          <td>
-              {{$formulario->beneficiario}}
-          </td>
-         
-          
-          <td>
-            {{$formulario->ci}}
-        </td>
-        <td>
-          @if ($formulario->distrito!=null)
-          {{$formulario->distrito->nombre}}
-
-          @endif
-      </td>
-       
-    
-  <td>
-    {{$formulario->created_at->format('d-M-Y')}}
-</td>
-          
-          <td>
-              <a href="{{route('showreport',$formulario->id)}}" class="btn btn-primary btn-sm"> Detalle</a>
-             
-            
-             
-                  
-             
-
-
-          </td>
-      </tr>
-      @endforeach
-  </tbody>
-</table>  
+@include('dashboard.reportes.table')
     
 
 
 
       
-<a href="{{route('reporteExcel',$Registros)}}">Descargar Excel</a>
+
 
 
 

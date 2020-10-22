@@ -17,8 +17,8 @@ globales({{$cantidad}})
     <div class="card-category">
       Aqui encontraras todos los registros</div>
   </div>
-  <div class="form-inline table-responsive">
-    <a class="btn btn-success btn-sm mt-1 mb-3 ml-3" href="{{route('formulario.create')}}">Registrar</a><div class="btn-sm mt-3 mb-3 ml-3">{{$formularios->links()}}</div>
+  <div class="ml-1 form-inline table-responsive">
+    <a class="btn btn-success btn-sm mt-1 mb-3 ml-3  btn-round" href="{{route('formulario.create')}}"><i class="fa fa-plus"></i> Registrar</a><div class="btn-sm mt-3 mb-3 ml-3">{{$formularios->links()}}</div>
     {!! Alert::render() !!}
   </div>
   <div class="card-body table-responsive">
@@ -94,12 +94,12 @@ globales({{$cantidad}})
   </td>
             
             <td>
-                <a href="{{route('formulario.show',$formulario->id)}}" class="btn btn-primary btn-sm"> Ver</a>
+                <a href="{{route('formulario.show',$formulario->id)}}" class="btn btn-primary btn-sm  btn-round"><i class="material-icons">visibility</i></a>
                
-                <a href="{{route('formulario.edit',$formulario->id)}}" class="btn btn-success btn-sm"> Editar</a>
+                <a href="{{route('formulario.edit',$formulario->id)}}" class="btn btn-info btn-sm  btn-round"><i class="material-icons">create</i></a>
                
                     
-                    <button class="btn btn-danger btn-sm" type="submit" data-toggle="modal" data-target="#deleteModal" data-id="{{ $formulario->id}}">Eliminar</button>
+                    <button class="btn btn-danger btn-sm  btn-round" type="submit" data-toggle="modal" data-target="#deleteModal" data-id="{{ $formulario->id}}"><i class="material-icons">delete</i></button>
                
 
 

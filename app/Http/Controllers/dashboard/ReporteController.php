@@ -6,6 +6,7 @@ use App\distrito;
 use App\Formulario;
 use App\Exports\UsersExport;
 use Illuminate\Http\Request;
+use App\Exports\InvoicesExport;
 use App\Exports\RegistrosExport;
 use App\Imports\FormularioImport;
 use App\Http\Controllers\Controller;
@@ -80,5 +81,9 @@ class ReporteController extends Controller
        $file=$request->registros;
        Excel::import(new FormularioImport, $file);
     }
+    public function exportPersonalizado() 
+{
+    return Excel::download(new InvoicesExport, 'invoices.xlsx');
+}
 
 }

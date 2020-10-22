@@ -26,12 +26,12 @@
           
             </div>
            
-            <div class="form-group">
+            <div class="form-group dropdown">
                 <label for="distrito_id" class="bmd-label-floating"> Distrito</label>
-          <select name="distrito_id" class="form-control" id="distrito_id">
+          <select name="distrito_id" class="form-control btn btn-secondary dropdown-toggle" id="distrito_id">
           
             @foreach ($listDistritos  as $nombre=>$id)
-            <option {{$formulario->distrito_id==$id ?'selected="selected"':''}} value="{{$id}}">{{$nombre}}</option>
+            <option {{$formulario->distrito_id==$id ?'selected="selected"':''}} class="dropdown-item" aria-labelledby="dropdownMenuButton" value="{{$id}}">{{$nombre}}</option>
             
                 @endforeach
           
@@ -41,12 +41,12 @@
             </div>
             <div class="form-group">
                 <label for="user_id"  class="bmd-label-floating">Usuario</label>
-                <input type="hidden" name="user_id"readonly class="form-control" id="user_id" value="{{auth()->user()->id}}">
-                <input type="text" name=""readonly class="form-control" id="" value="{{auth()->user()->name}}">
+                <input type="hidden" name="user_id"readonly class="form-control"  id="user_id" value="{{auth()->user()->id}}">
+                <input type="text" name=""readonly class="form-control btn btn-secondary" id="" value="{{auth()->user()->name}}">
 
             </div>
         
-              <input type="submit" class="btn btn-success" value="Registrar">
+              <input type="submit" class="btn btn-success  btn-round" value="Guardar">
          
    
       

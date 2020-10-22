@@ -15,26 +15,26 @@
       <ul class="navbar-nav">
         
        
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown mr-2">
           <a class="nav-link btn btn-info" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           <span class="text-white"> <i class="material-icons">person</i>Tu Cuenta</span> 
+            <i class="material-icons text-white">account_circle</i><span class="text-white">Tu Cuenta</span> 
             <p class="d-lg-none d-md-block">
             
             </p>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-          <label class="dropdown-item">{{auth()->user()->name}}</label>
+          <label class="dropdown-item"><i class="material-icons text-dark">face</i>{{auth()->user()->name}} </label>
             
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                   document.getElementById('logout-form').submit();">
-   Cerrar sesion
+  <i class="material-icons text-dark">login</i> Cerrar sesion
          </a>
          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
           @csrf
         </form>
-         
+          </div>
         </li>
       </ul>
     </div>

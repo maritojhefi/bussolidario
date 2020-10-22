@@ -9,11 +9,11 @@
     <div class="card-category">
       Aqui encontraras todos los distritos</div>
   </div>
-  <div class="form-inline">
-    <a class="btn btn-success btn-sm mt-1 mb-3 ml-3" href="{{route('distrito.create')}}">Crear</a><div class="btn-sm mt-3 mb-3 ml-3">{{$distritos->links()}}</div>
+  <div class=" ml-1 form-inline table-responsive">
+    <a class="btn btn-success btn-sm mt-1 mb-3 ml-3  btn-round" href="{{route('distrito.create')}}"><i class="fa fa-plus"></i> Crear</a><div class="btn-sm mt-3 mb-3 ml-3">{{$distritos->links()}}</div>
 
   </div>
-  <div class="card-body">
+  <div class="card-body table-responsive">
     <table class="table table-shopping">
       <thead>
           <tr style="color:#FF7126 ">
@@ -54,10 +54,10 @@
           
            
             @if(auth()->user()->rol_id=='2') 
-            <a href="{{route('distrito.edit',$distrito->id)}}" class="btn btn-success"> Editar</a>
+            <a href="{{route('distrito.edit',$distrito->id)}}" class="btn btn-info  btn-round"><i class="fa fa-edit"></i></a>
            
                 
-                <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#deleteModal" data-id="{{ $distrito->id}}">Eliminar</button>
+                <button class="btn btn-danger  btn-round" type="submit" data-toggle="modal" data-target="#deleteModal" data-id="{{ $distrito->id}}"><i class="fa fa-trash"></i></button>
            
   
   

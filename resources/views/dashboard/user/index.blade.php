@@ -9,11 +9,11 @@
     <div class="card-category">
       Aqui encontraras todos los usuarios que pueden ingresar al sistema</div>
   </div>
-  <div class="form-inline">
-    <a class="btn btn-success btn-sm mt-1 mb-3 ml-3" href="{{route('user.create')}}">Crear</a><div class="btn-sm mt-3 mb-3 ml-3">{{$users->links()}}</div>
+  <div class="ml-1 form-inline table-responsive">
+    <a class="btn btn-success btn-sm mt-1 mb-3 ml-3 btn-round" href="{{route('user.create')}}"> <i class="fa fa-plus"></i>_Crear</a><div class="btn-sm mt-3 mb-3 ml-3">{{$users->links()}}</div>
     {!! Alert::render() !!}
   </div>
-  <div class="card-body">
+  <div class="card-body table-responsive">
     <table class="table table-shopping">
 
     <thead>
@@ -58,10 +58,10 @@
             <td>
                
                
-                <a href="{{route('user.edit',$user->id)}}" class="btn btn-success"> Editar</a>
+                <a href="{{route('user.edit',$user->id)}}" class="btn btn-info btn-round"> <i class="material-icons">create</i> </a>
                
                     
-                    <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#deleteModal" data-id="{{ $user->id}}">Eliminar</button>
+                    <button class="btn btn-danger btn-round" type="submit" data-toggle="modal" data-target="#deleteModal" data-id="{{ $user->id}}"><i class="material-icons">delete</i> </button>
                
 
 

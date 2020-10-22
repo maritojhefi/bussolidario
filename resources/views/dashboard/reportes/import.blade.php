@@ -30,19 +30,23 @@
           {{csrf_field()}}
           <div class="row">
               <div class="col-12">
-                  <div class="card_header card-header-info">
+                  <div class="card_header card-header-info table-responsive">
+                    
                     <label class="card-category" for="alumnos">Seleccionar archivo</label>
 
                       <input type="file" name="registros" class="" id="registros">
                   </div>
                   <div class="mt-3">
-                      <button type="submit" class="btn btn-primary btn-round">Importar</button>
+                      <button type="submit" class="btn btn-success btn-round">Importar</button>
                   </div>
               </div>
           </div>
       </form>
   </div>
 </div>
+
+
+@include('dashboard.reportes.slider')
 
 </div>
 

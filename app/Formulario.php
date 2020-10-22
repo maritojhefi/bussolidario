@@ -30,7 +30,7 @@ class Formulario extends Model
 
     public function scopeDistritos($query, $distritos) {
     	if ($distritos) {
-    		return $query->where('distrito_id','like',"%$distritos%");
+    		return $query->where('distrito_id','like',"$distritos");
         }
         
     }

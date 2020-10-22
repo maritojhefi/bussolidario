@@ -28,6 +28,7 @@ Route::get('/dashboard/reporte/{formulario}/show', 'dashboard\ReporteController@
 
 Route::get('/dashboard/indexUsers', 'dashboard\FormularioUserController@index')->name('IndexUsers');
 Route::get('/dashboard/download', 'dashboard\ReporteController@reporteExcel')->name('reporteExcel');
+Route::get('/dashboard/download/customized', 'dashboard\ReporteController@exportPersonalizado')->name('exportPersonalizado');
 Route::get('/dashboard/download/{excel}', 'dashboard\ReporteController@reporteExcelpersonalizado')->name('reporteExcelpersonalizado');
 Route::get('/dashboard/imports', 'dashboard\ReporteController@importarShow')->name('importarShow');
 Route::post('/dashboard/imports/excel', 'dashboard\ReporteController@importarExcel')->name('importarExcel');
