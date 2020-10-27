@@ -73,20 +73,27 @@ class ReporteController extends Controller
         Excel::import($import, request()->file('registros'));
         return view('dashboard.reportes.import', ['numRows'=>$import->getRowCount()]);
         } catch (\Throwable $th) {
-            return back()->with('status','Errores en el documento');
+          
 
         }
        
     }
     public function importarExcel2(Request $request)
     {
-       $file=$request->registros;
-       Excel::import(new FormularioImport, $file);
+        try {
+            $import = new FormularioImport();
+            $file=$request->registros;
+            Excel::import($import, $file);
+            return view('dashboard.reportes.import', ['numRows'=>$import->getRowCount()]);
+        } catch (\Throwable $th) {
+            return back()->with('status','Errores en el documento');
+        }
+       
     }
     public function exportPersonalizado() 
 {
     
-    return Excel::download(new InvoicesExport, 'invoices.xlsx');
+    return Excel::download(new InvoicesExport, 'reportes.xlsx');
 }
 
 }

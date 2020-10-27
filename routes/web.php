@@ -31,7 +31,9 @@ Route::get('/dashboard/download', 'dashboard\ReporteController@reporteExcel')->n
 Route::get('/dashboard/download/customized', 'dashboard\ReporteController@exportPersonalizado')->name('exportPersonalizado');
 Route::get('/dashboard/download/{excel}', 'dashboard\ReporteController@reporteExcelpersonalizado')->name('reporteExcelpersonalizado');
 Route::get('/dashboard/imports', 'dashboard\ReporteController@importarShow')->name('importarShow');
-Route::get('/dashboard/imports/excel', 'dashboard\ReporteController@importarExcel')->name('importarExcel');
+Route::post('/dashboard/imports/excel', 'dashboard\ReporteController@importarExcel')->name('importarExcel');
+Route::post('/dashboard/importar/excel', 'dashboard\ReporteController@importarExcel2')->name('importar');
+
 
 
 

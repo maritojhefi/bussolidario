@@ -28,13 +28,14 @@ class FormularioImport implements ToModel, WithHeadingRow, WithValidation
             ++$this->numRows;
             return new Formulario([
                 
-                'distrito_id'=>$row['distrito'],
+                'created_at'=>Date::excelToDateTimeObject($row['fecha']),
+'distrito_id'=>$row['distrito'],
                 'ci' => $row['cedula'],
                 'beneficiario' => $row['beneficiario'],
-                'usuario'=> Auth::user(),
+                
                 'telefono' => $row['telefono'],
                 'barrio' => $row['barrio'],
-                'created_at'=>Date::excelToDateTimeObject($row['fecha']),
+              
             ]);
  
     }

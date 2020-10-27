@@ -26,7 +26,7 @@
           </div>
       @endif
 
-        <form action="{{route('importarExcel')}}" method="post" enctype="multipart/form-data">
+        <form action="{{route('importar')}}" method="post" enctype="multipart/form-data">
           {{csrf_field()}}
           <div class="row">
               <div class="col-12">
